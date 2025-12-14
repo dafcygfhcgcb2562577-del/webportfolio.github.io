@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио | Андрей</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="menu-item" href="#main">Главная</a>
+        <a class="menu-item" href="#about">Обо мне</a>
+        <a class="menu-item" href="#achivments">Интересы</a>
+        <a class="menu-item" href="#contact">Связь</a>
+      </nav>
+      <div class="mobile-block">
+        <h1>Андрей Dev.</h1>
+        <img
+          class="menu-icon"
+          src="images/menu.svg"
+          alt="Menu Icon"
+          onclick="openSideBar()"
+        />
+      </div>
+    </header>
+
+    <main>
+      <div id="side-bar">
+        <img
+          class="menu-close"
+          src="images/close.svg"
+          alt="Menu Close"
+          onclick="closeSideBar()"
+        />
+        <div class="menu-items">
+          <a class="menu-item" href="#main" onclick="closeSideBar()">Главная</a>
+          <a class="menu-item" href="#about" onclick="closeSideBar()">Обо мне</a>
+          <a class="menu-item" href="#achivments" onclick="closeSideBar()">Интересы</a>
+          <a class="menu-item" href="#contact" onclick="closeSideBar()">Связь</a>
+        </div>
+      </div>
+
+      <section id="main">
+        <div class="main-text">
+          <h1 class="header">Я Андрей</h1>
+          <p class="text">
+            Мне 16 лет, учусь в школе №1533 (ЛИТ).Не люблю скучать.
+          </p>
+          <div class="skills-tags">
+            <span class="tag">Школа 1533</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">LEGO</span>
+            <span class="tag">Спорт</span>
+          </div>
+        </div>
+        <img
+          class="avatar"
+          src="https://avatars.mds.yandex.net/i?id=302cb104a56f769fc3c1360a5f506adc_l-4119382-images-thumbs&n=13"
+          alt="Фото Андрея"
+        />
+      </section>
+
+      <section id="about">
+        <div class="about-content">
+          <h1>Обо мне</h1>
+          <div class="about-wrapper">
+            <img
+              class="avatar about-avatar"
+              src="https://i.pinimg.com/736x/7f/9c/ff/7f9cffa508dd8e663f2f1e502602717c.jpg"
+              alt="Фото Андрея"
+            />
+            <div class="about-text">
+              <p class="about-paragraph">
+                Учусь в 10 классе ЛИТ 1533. В свободное время отдыхаю от учёбы: гуляю или играю в игры.
+              </p>
+              <p class="about-paragraph">
+                Мне нравится создавать что-то новое.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achivments">
+        <h1>Мои интересы</h1>
+        <div class="achivments-container">
+          <div class="achivment-card">
+            <div class="achivment-icon">🏫</div>
+            <h3>Учеба</h3>
+            <p>
+              Учусь в лицее 1533.Изучаю много разных предметов.
+            </p>
+          </div>
+          <div class="achivment-card">
+            <div class="achivment-icon">🧱</div>
+            <h3>LEGO</h3>
+            <p>
+              Люблю собирать сложные наборы. Это интересно и развивает логику.
+            </p>
+          </div>
+          <div class="achivment-card">
+            <div class="achivment-icon">🚲</div>
+            <h3>Спорт</h3>
+            <p>
+              Катаюсь на велосипеде и просто люблю плавать в бассейне.
+            </p>
+          </div>
+          <div class="achivment-card">
+            <div class="achivment-icon">🎮</div>
+            <h3>Игры</h3>
+            <p>
+              Играю в компьютерные игры с друзьями.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h1>Напиши мне</h1>
+        <p class="contact-description">
+          Для связи заполни форму:
+        </p>
+        <form onsubmit="event.preventDefault(); sendForm();">
+          <label for="name">Имя</label>
+          <input
+            id="name"
+            class="input"
+            name="name"
+            type="text"
+            placeholder="Твое имя"
+          />
+
+          <label for="age">Возраст</label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            placeholder="Сколько лет"
+          />
+
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="pochta@mail.ru"
+          />
+
+          <label for="message">Сообщение</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Привет..."
+          ></textarea>
+        </form>
+        <button id="button" class="form-btn" onclick="sendForm()">
+          Отправить
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">📞 Позвонить</a>
+          <a href="#">✉️ Написать</a>
+        </div>
+        <p class="footer-text">© 2025 Андрей.</p>
+        <div class="social-links">
+          <span>Соцсети:</span>
+          <a href="#" class="social-link">VK</a>
+          <a href="#" class="social-link">Telegram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="main.js"></script>
+</html>
